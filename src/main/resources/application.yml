@@ -1,0 +1,22 @@
+
+spring:
+    datasource:
+      url: jdbc:mysql://wq-qwertyuiop.mysql.rds.aliyuncs.com:3303/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      username: wproot
+      password: qwer@1234
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa:
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+         hibernate:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+
+    thymeleaf:
+       cache: false
+       mode: LEGACYHTML5
+server:
+  port: 8080
