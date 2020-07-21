@@ -4,12 +4,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/skip")
+@RequestMapping("/skip/user")
 public class SkipController {
 
-    @RequestMapping("/toDemo1")
-    public String toDemo1(){
-        return "/test/test1.html";
+//    @RequestMapping("/addUser")
+//    public String toDemo1(){
+//        return "/test/test1.html";
+//    }
+
+    @RequestMapping("/addUser")
+    public String addUser(){
+        return "system/user/add";
     }
 
 }

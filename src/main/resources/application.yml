@@ -1,5 +1,7 @@
 
 spring:
+    application:
+      name: spring-cloud-login
     datasource:
       url: jdbc:mysql://wq-qwertyuiop.mysql.rds.aliyuncs.com:3303/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
       username: wproot
@@ -18,5 +20,9 @@ spring:
     thymeleaf:
        cache: false
        mode: LEGACYHTML5
+
 server:
-  port: 8080
+  port: 9000
+
+
+
