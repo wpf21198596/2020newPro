@@ -1,7 +1,9 @@
+
 package com.example.demo.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -14,6 +16,8 @@ public class UserInfo implements Serializable {
     private String name;
     private String password;
     private String salt;
+    private String ipAddress;
+    private Date CreateDate;
     private byte state;
     @ManyToMany(fetch= FetchType.EAGER)
     @JoinTable(name = "SysUserRole", joinColumns = { @JoinColumn(name = "uid") }, inverseJoinColumns ={@JoinColumn(name = "roleId") })
@@ -79,5 +83,21 @@ public class UserInfo implements Serializable {
 
     public void setRoleList(List<SysRole> roleList) {
         this.roleList = roleList;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    public Date getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        CreateDate = createDate;
     }
 }

@@ -36,13 +36,6 @@ public class LoginController {
         System.out.println("HomeController.login()");
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         Subject subject = SecurityUtils.getSubject();
-        System.out.println("UsernamePasswordToken:");
-        System.out.println("hashCode:" + token.hashCode());
-        System.out.println("Principal:" + token.getPrincipal());
-        System.out.println("Credentials:" + String.valueOf((char[]) token.getCredentials()));
-        System.out.println("host:" + token.getHost());
-        System.out.println("Username:" + token.getUsername());
-        System.out.println("Password:" + String.valueOf(token.getPassword()));
         try {
             subject.login(token);
         } catch (AuthenticationException e) {

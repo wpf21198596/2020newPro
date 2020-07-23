@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>index</title>
 </head>
+<link rel="stylesheet" href="/js/index/index.css">
 <body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -22,8 +23,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!--<li class="active"><a href="#">功能一</a></li>-->
-                <li><a href="#">即时通讯</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#">功能一</a></li>
+                <li><a href="#">功能二</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/logout">退出</a></li>
@@ -31,7 +32,28 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<div class="tabsbox" id="tab">
+    <!-- tab 标签 -->
+    <nav class="fisrstnav">
+        <ul>
+            <li class="liactive"><span>测试1</span><span class="iconfont icon-guanbi"></span></li>
+            <li><span>测试2</span><span class="iconfont icon-guanbi"></span></li>
+            <li><span>测试3</span><span class="iconfont icon-guanbi"></span></li>
+        </ul>
+        <div class="tabadd">
+            <span>+</span>
+        </div>
+    </nav>
+
+    <!-- tab 内容 -->
+    <div class="tabscon">
+        <section class="conactive">测试1</section>
+        <section>测试2</section>
+        <section>测试3</section>
+    </div>
+</div>
 <h1>index</h1>
 <div th:include="include::footer"></div>
+<script src="/js/index/index.js"></script>
 </body>
 </html>
