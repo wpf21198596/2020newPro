@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.common.utils.HttpComputerUtil;
 import com.example.demo.common.response.ServerResponse;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -42,6 +43,11 @@ public class LoginController {
 //            e.printStackTrace();
             System.out.println("login failed :" + e.getMessage());
         }
+        //获取用户名
+        String userName = HttpComputerUtil.getUserName();
+        //获取电脑ip
+        String ipAddr = HttpComputerUtil.getIp();
+        System.out.println("用户名 :" + userName+"电脑ip:"+ipAddr);
         return ServerResponse.success();
     }
 
