@@ -61,41 +61,25 @@
             <scope>true</scope>
         </dependency>
 
-        <!-- 解决word转pdf 位置错乱问题 -->
         <dependency>
-            <groupId>fr.opensagres.xdocreport</groupId>
-            <artifactId>org.apache.poi.xwpf.converter.pdf</artifactId>
-            <version>1.0.6</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <version>1.18.4</version>
         </dependency>
 
-        <!-- 电子证书生成 电子签章 -->
-        <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
         <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itextpdf</artifactId>
-            <version>5.5.13</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.5</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.itextpdf/itext-pdfa -->
         <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itext-pdfa</artifactId>
-            <version>5.5.13</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.60</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on -->
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcpkix-jdk15on</artifactId>
-            <version>1.60</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>

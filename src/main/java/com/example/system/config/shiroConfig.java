@@ -37,6 +37,7 @@ public class shiroConfig {
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/user/save", "anon");
         filterChainDefinitionMap.put("/skip/user/**", "anon");
+        filterChainDefinitionMap.put("/open/**", "anon");
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/imgs/**", "anon");
         filterChainDefinitionMap.put("/css/**", "anon");
