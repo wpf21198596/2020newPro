@@ -1,0 +1,39 @@
+
+spring:
+    application:
+      name: spring-cloud-login
+    datasource:
+      url: jdbc:mysql://wq-qwertyuiop.mysql.rds.aliyuncs.com:3303/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      username: wproot
+      password: qwer@1234
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initialSize: 1
+      minIdle: 3
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 160000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 160000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 130000
+
+    jpa:
+      database: mysql
+      show-sql: true
+      open-in-view: false
+      hibernate:
+        ddl-auto: update
+      properties:
+         hibernate:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+
+    thymeleaf:
+       cache: false
+       mode: HTML
+
+    jackson:
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+
+server:
+  port: 9000

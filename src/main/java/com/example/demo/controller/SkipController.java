@@ -17,4 +17,9 @@ public class SkipController {
         return "system/user/add";
     }
 
+    @RequestMapping("/noPre")
+    public String skipNoPre(){
+        return "403";
+    }
+
 }

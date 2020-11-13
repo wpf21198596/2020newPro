@@ -29,6 +29,7 @@ public class WXMyRequest {
     @Column//创建时间
     private Date createTime;
 
+    @Transient
     private List<WXMyHelp> helpList;
 
 }

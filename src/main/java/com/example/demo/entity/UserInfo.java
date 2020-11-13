@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 public class UserInfo implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer uid;
     @Column(unique =true)
     private String username;
