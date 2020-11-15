@@ -38,7 +38,7 @@ public class MyShiroRealm extends AuthorizingRealm {
          UserInfo user = userInfoService.findByUsername(username);
          if (user != null) {
              //将查询到的用户账号和密码存放到 authenticationInfo用于后面的权限判断。第三个参数传入用户输入的用户名。
-             SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user.getUsername(), user.getPassword(), getName());
+             SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user, user.getPassword(), getName());
              //设置盐，用来核对密码
              authenticationInfo.setCredentialsSalt(ByteSource.Util.bytes(user.getSalt()));
              return authenticationInfo;
