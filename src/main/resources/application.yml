@@ -2,7 +2,7 @@ spring:
   application:
     name: spring-cloud-login
   profiles:
-    active: dev
+    active: pro
 
   jpa:
     database: mysql
