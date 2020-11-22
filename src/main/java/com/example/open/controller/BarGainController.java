@@ -42,7 +42,7 @@ public class BarGainController {
     private WXMyRequestDao myRequestDao;
 
     @PostMapping("/registerUser")
-    public ServerResponse registerUser(String code) {
+    public ServerResponse registerUser(String code,String nickName) {
         org.apache.http.client.HttpClient httpclient = new DefaultHttpClient();
         HttpGet httpget;
         String openId="";
@@ -67,6 +67,7 @@ public class BarGainController {
         Optional<WXUser> one = wxUserDao.findOne(example);
         if (one.isPresent())return ServerResponse.success(one.get().getId());
         wxUser.setCreateTime(new Date());
+        wxUser.setNickName(nickName);
         wxUserDao.save(wxUser);
         return  ServerResponse.success(wxUser.getId());
     }
